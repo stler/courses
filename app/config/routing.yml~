@@ -1,0 +1,8 @@
+app:    
+    defaults:  { _controller: AppBundle:Admin:index }
+    pattern:   /admin/
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/"
+    type:     annotation
+    prefix: /admin
+    

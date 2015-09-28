@@ -1,0 +1,110 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Courses
+ *
+ * @ORM\Table(name="courses", indexes={@ORM\Index(name="alias", columns={"alias"})})
+ * @ORM\Entity
+ */
+class Courses
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="alias", type="string", length=255, nullable=false)
+     */
+    private $alias;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user_id", type="integer", nullable=false)
+     */
+    private $userId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="university_id", type="integer", nullable=true)
+     */
+    private $universityId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255, nullable=true)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="length", type="string", length=255, nullable=true)
+     */
+    private $length;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="language", type="string", length=100, nullable=true)
+     */
+    private $language;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="workload", type="string", length=255, nullable=true)
+     */
+    private $workload;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=255, nullable=true)
+     */
+    private $image;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="preview_video", type="string", length=255, nullable=true)
+     */
+    private $previewVideo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="preview_content", type="string", length=255, nullable=true)
+     */
+    private $previewContent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="content", type="text", length=65535, nullable=true)
+     */
+    private $content;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_start", type="date", nullable=true)
+     */
+    private $dateStart;
+
+
+}
+
